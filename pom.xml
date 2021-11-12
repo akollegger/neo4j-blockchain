@@ -8,8 +8,8 @@
   <version>1.0.0-SNAPSHOT</version>
 
   <packaging>jar</packaging>
-  <name>Neo4j Blockchain Pplugin</name>
-  <description>An example for writing Neo4j procedures and functions</description>
+  <name>Neo4j Blockchain Plugin</name>
+  <description>Neo4j procedures and functions for an in-graph blockchain</description>
 
   <properties>
     <java.version>11</java.version>

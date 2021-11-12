@@ -9,9 +9,9 @@ import org.neo4j.logging.Log;
 import org.neo4j.procedure.*;
 
 /**
- * This is an example showing how you could expose Neo4j's full text indexes as
- * two procedures - one for updating indexes, and one for querying by label and
- * the lucene query language.
+ * A Blockchain Ledger API.
+ * 
+ * Note: this implementation is not persistent!
  */
 public class BlockchainAPI {
 
@@ -26,6 +26,8 @@ public class BlockchainAPI {
 
     /**
      * Put a value to be stored somewhere for later retrieval.
+     * 
+     * A trivial procedure to demonstrate the put side of put/get.
      *
      * @param value  plain string value to store
      * @return  the value that was stored
@@ -41,7 +43,9 @@ public class BlockchainAPI {
     /**
      * Get the previously stored value.
      *
-     * @return  A RelationshipTypes instance with the relations (incoming and outgoing) for a given node.
+     * A trivial procedure to demonstrate the get side of put/get.
+     * 
+     * @return  the previouslyt stored value, or default initial value
      */
     @Procedure(value = "blockchain.get", mode = Mode.READ)
     @Description("Gets a value.")
